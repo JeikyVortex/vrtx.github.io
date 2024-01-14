@@ -29,7 +29,8 @@ document.addEventListener('keydown', function(e) {
 
     // si la ultima esta bien, lo activa
     if (konamiCodePosition == konamiCode.length) {
-      activateCheats();
+      taDa();
+      setTimeout(activateCheats, 1000)
       konamiCodePosition = 0;
     }
   } else {
@@ -37,10 +38,12 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-function activateCheats() {
+function taDa() {
   var audio = new Audio('./audio/tada.mp3');
   audio.play();
+}
 
+function activateCheats() {
   alert("Bien, lo encontraste~");
   alert("Bueh, el secreto es este, apreta aceptar");
 
