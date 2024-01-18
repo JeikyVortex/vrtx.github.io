@@ -914,7 +914,7 @@
                         <br>
                         <h2 id="text03">Redes</h2>
                         <li>
-                            <a class="n01" href="https://twitter.com/JeikyVortex">
+                            <a class="n06" href="https://twitter.com/JeikyVortex">
                                 <svg>
                                     <use xlink:href="#icon-905"></use>
                                 </svg>
@@ -922,7 +922,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="n02" href="https://www.instagram.com/jeikyvortex/">
+                            <a class="n06" href="https://www.instagram.com/jeikyvortex/">
                                 <svg>
                                     <use xlink:href="#icon-910"></use>
                                 </svg>
@@ -930,7 +930,7 @@
                             </a>
                         </li>
                         <!--li>
-                            <a class="n03" href="https://discord.com/invite/xm3Ygjz">
+                            <a class="n06" href="https://discord.gg/Y2vZ4MZAXu">
                                 <svg>
                                     <use xlink:href="#icon-93f"></use>
                                 </svg>
@@ -938,7 +938,7 @@
                             </a>
                         </li!-->
                         <li>
-                            <a class="n04" href="https://www.twitch.tv/jeikyvortex">
+                            <a class="n06" href="https://www.twitch.tv/jeikyvortex">
                                 <svg>
                                     <use xlink:href="#icon-92f"></use>
                                 </svg>
@@ -946,7 +946,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="n05" href="https://steamcommunity.com/id/JeikyVortex">
+                            <a class="n06" href="https://steamcommunity.com/id/JeikyVortex">
                                 <svg>
                                     <use xlink:href="#icon-923"></use>
                                 </svg>
@@ -966,15 +966,15 @@
         <script>
             (function() {
                 var on = addEventListener
-                  , $ = function(q) {
+                , $ = function(q) {
                     return document.querySelector(q)
                 }
-                  , $$ = function(q) {
+                , $$ = function(q) {
                     return document.querySelectorAll(q)
                 }
-                  , $body = document.body
-                  , $inner = $('.inner')
-                  , client = (function() {
+                , $body = document.body
+                , $inner = $('.inner')
+                , client = (function() {
                     var o = {
                         browser: 'other',
                         browserVersion: 0,
@@ -1017,13 +1017,13 @@
                     var _canUse = document.createElement('div');
                     o.canUse = function(p) {
                         var e = _canUse.style
-                          , up = p.charAt(0).toUpperCase() + p.slice(1);
+                        , up = p.charAt(0).toUpperCase() + p.slice(1);
                         return (p in e || ('Moz' + up)in e || ('Webkit' + up)in e || ('O' + up)in e || ('ms' + up)in e);
                     }
                     ;
                     return o;
                 }())
-                  , trigger = function(t) {
+                , trigger = function(t) {
                     if (client.browser == 'ie') {
                         var e = document.createEvent('Event');
                         e.initEvent(t, false, true);
@@ -1031,7 +1031,7 @@
                     } else
                         dispatchEvent(new Event(t));
                 }
-                  , cssRules = function(selectorText) {
+                , cssRules = function(selectorText) {
                     var ss = document.styleSheets, a = [], f = function(s) {
                         var r = s.cssRules, i;
                         for (i = 0; i < r.length; i++) {
@@ -1045,7 +1045,7 @@
                         f(ss[i]);
                     return a;
                 }
-                  , thisHash = function() {
+                , thisHash = function() {
                     var h = location.hash ? location.hash.substring(1) : null, a;
                     if (!h)
                         return null;
@@ -1061,7 +1061,7 @@
                         h = h.toLowerCase();
                     return h;
                 }
-                  , scrollToElement = function(e, style, duration) {
+                , scrollToElement = function(e, style, duration) {
                     var y, cy, dy, start, easing, offset, f;
                     if (!e)
                         y = 0;
@@ -1123,10 +1123,10 @@
                     ;
                     f();
                 }
-                  , scrollToTop = function() {
+                , scrollToTop = function() {
                     scrollToElement(null);
                 }
-                  , loadElements = function(parent) {
+                , loadElements = function(parent) {
                     var a, e, x, i;
                     a = parent.querySelectorAll('iframe[data-src]:not([data-src=""])');
                     for (i = 0; i < a.length; i++) {
@@ -1150,7 +1150,7 @@
                         break;
                     }
                 }
-                  , unloadElements = function(parent) {
+                , unloadElements = function(parent) {
                     var a, e, x, i;
                     a = parent.querySelectorAll('iframe[data-src=""]');
                     for (i = 0; i < a.length; i++) {
@@ -1399,12 +1399,12 @@
         <script>
             // mapeo
             var allowedKeys = {
-              37: 'left',
-              38: 'up',
-              39: 'right',
-              40: 'down',
-              65: 'a',
-              66: 'b'
+            37: 'left',
+            38: 'up',
+            39: 'right',
+            40: 'down',
+            65: 'a',
+            66: 'b'
             };
 
             // codigo konami
@@ -1416,29 +1416,31 @@
             // cuando detecta una tecla
             document.addEventListener('keydown', function(e) {
               // aqui toma el valor de la tecla
-              var key = allowedKeys[e.keyCode];
+            var key = allowedKeys[e.keyCode];
               // toma el valor de la tecla para el codigo
-              var requiredKey = konamiCode[konamiCodePosition];
+            var requiredKey = konamiCode[konamiCodePosition];
             
               // compara la tecla con las teclas requeridas
-              if (key == requiredKey) {
+            if (key == requiredKey) {
             
                 // suma uno si sigue bien la secuencia
+                var audioButton = new Audio('./audio/button.mp3');
+                audioButton.play();
                 konamiCodePosition++;
             
                 // si la ultima esta bien, lo activa
                 if (konamiCodePosition == konamiCode.length) {
-                  heheheh();
-                  konamiCodePosition = 0;
-                }
-              } else {
+                heheheh();
                 konamiCodePosition = 0;
-              }
+                }
+            } else {
+                konamiCodePosition = 0;
+            }
             });
 
             function heheheh() {
-              var audio = new Audio('./audio/rickroll.mp3');
-              audio.play();
+            var audio = new Audio('./audio/rickroll.mp3');
+            audio.play();
             }
         </script>
     </body>

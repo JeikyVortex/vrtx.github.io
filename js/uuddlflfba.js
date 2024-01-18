@@ -11,6 +11,7 @@ var allowedKeys = {
 // codigo konami
 var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
 
+
 // conteo por tecla
 var konamiCodePosition = 0;
 
@@ -25,6 +26,8 @@ document.addEventListener('keydown', function(e) {
   if (key == requiredKey) {
 
     // suma uno si sigue bien la secuencia
+    var audioButton = new Audio('./audio/button.mp3');
+    audioButton.play();
     konamiCodePosition++;
 
     // si la ultima esta bien, lo activa
@@ -47,5 +50,5 @@ function activateCheats() {
   alert("Bien, lo encontraste~");
   alert("Bueh, el secreto es este, apreta aceptar");
 
-  window.location.href = "http://www.youtube.com/watch?v=qDaGbLzUnrQ";
+  window.location.href = "https://www.youtube.com/watch?v=58LeVo7j46w";
 }
