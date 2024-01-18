@@ -27,6 +27,7 @@ document.addEventListener('keydown', function(e) {
 
     // suma uno si sigue bien la secuencia
     var audioButton = new Audio('./audio/button.mp3');
+    audioButton.volume = 0.5
     audioButton.play();
     konamiCodePosition++;
 

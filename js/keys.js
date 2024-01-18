@@ -28,6 +28,7 @@ document.addEventListener('keydown', function(e){
 
         //suma 1
         var audioButton = new Audio('./audio/button.mp3');
+        audioButton.volume = 0.5
         audioButton.play();
         cod1d1Pos++;
 
