@@ -966,7 +966,20 @@
         <script>
             
             (function() {
+                var tekken7a = new Audio ('./audio/fighttothetop.mp3');
                 
+                function fighttothetop (){ 
+                    tekken7a.volume = 0.35;
+                    tekken7a.play();
+                    tekken7a.loop = true;
+                }
+
+                function fighttotheSTOP (){ 
+                    tekken7a.pause();
+                    tekken7a.currentTime = 0;
+                }
+
+
                 var on = addEventListener
                 , $ = function(q) {
                     return document.querySelector(q)
@@ -1195,9 +1208,6 @@
                         window.onerror = null;
                     }
                 };
-
-
-               
                 on('load', function() {
                     
                     setTimeout(function() {
@@ -1207,10 +1217,8 @@
                         }, 1375);
                     }, 100);
                 });
-                
-                
                 loadElements(document.body);
-                
+                fighttothetop();
                 var style, sheet, rule;
                 style = document.createElement('style');
                 style.appendChild(document.createTextNode(''));
@@ -1406,18 +1414,7 @@
             )();
         </script>
         <script>
-            var tekken7a = new Audio ('./audio/fighttothetop.mp3');
-                
-                function fighttothetop (){ 
-                    tekken7a.volume = 0.35;
-                    tekken7a.play();
-                    tekken7a.loop = true;
-                }
-
-                function fighttotheSTOP (){ 
-                    tekken7a.pause();
-                    tekken7a.currentTime = 0;
-                }
+            
                 document.addEventListener('DOMContentLoaded', function() {
                     fighttothetop();
                 });
