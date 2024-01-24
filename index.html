@@ -964,18 +964,7 @@
             </div>
         </div>
         <script>
-            var tekken7a = new Audio ('./audio/fighttothetop.mp3');
-
-            function fighttothetop (){ 
-                tekken7a.volume = 0.35;
-                tekken7a.loop = true;
-                tekken7a.play();
-            }
-
-            function fighttotheSTOP (){ 
-                tekken7a.pause();
-                tekken7a.currentTime = 0;
-            }
+            
 
             (function() {
                 
@@ -1207,7 +1196,9 @@
                         window.onerror = null;
                     }
                 };
-                fighttothetop();
+
+
+               
                 on('load', function() {
                     setTimeout(function() {
                         $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing');
@@ -1216,7 +1207,21 @@
                         }, 1375);
                     }, 100);
                 });
+                var tekken7a = new Audio ('./audio/fighttothetop.mp3');
+
+                function fighttothetop (){ 
+                    tekken7a.volume = 0.35;
+                    tekken7a.loop = true;
+                    tekken7a.play();
+                }
+
+                function fighttotheSTOP (){ 
+                    tekken7a.pause();
+                    tekken7a.currentTime = 0;
+                }
+                
                 loadElements(document.body);
+                fighttothetop();
                 var style, sheet, rule;
                 style = document.createElement('style');
                 style.appendChild(document.createTextNode(''));
