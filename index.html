@@ -1429,6 +1429,12 @@
             66: 'b'
             };
 
+            function click(){
+            var audioButton = new Audio('./audio/button.mp3');
+                audioButton.volume = 0.5
+                audioButton.play();
+            }
+
             // codigo konami
             var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
 
@@ -1446,9 +1452,7 @@
             if (key == requiredKey) {
             
                 // suma uno si sigue bien la secuencia
-                var audioButton = new Audio('./audio/button.mp3');
-                audioButton.volume = 0.5
-                audioButton.play();
+                click();
                 konamiCodePosition++;
             
                 // si la ultima esta bien, lo activa
