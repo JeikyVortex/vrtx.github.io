@@ -976,7 +976,9 @@
                     tekken7a.pause();
                     tekken7a.currentTime = 0;
                 }
-                
+                document.addEventListener('DOMContentLoaded', function() {
+                    fighttothetop();
+                });
                 
             
             (function() {
@@ -1213,7 +1215,7 @@
 
                
                 on('load', function() {
-                    fighttothetop();
+                    
                     setTimeout(function() {
                         $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing');
                         setTimeout(function() {
