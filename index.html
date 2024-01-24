@@ -1211,8 +1211,8 @@
 
                 function fighttothetop (){ 
                     tekken7a.volume = 0.35;
-                    tekken7a.loop = true;
                     tekken7a.play();
+                    tekken7a.loop = true;
                 }
 
                 function fighttotheSTOP (){ 
@@ -1415,7 +1415,8 @@
                 }
             }
             )();
-
+        </script>
+        <script>
             // mapeo
             var allowedKeys = {
             37: 'left',
@@ -1462,14 +1463,10 @@
             function heheheh() {
             var audio = new Audio('./audio/rickroll.mp3');
             audio.play();
-            }
-
             heheheh.addEventListener('ended', function(){
                 fighttothetop();
-            });
-        </script>
-        <script>
-            
+            })
+            };
         </script>
     </body>
 </html>
