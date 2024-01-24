@@ -10,7 +10,7 @@
         <meta property="og:title" content="🌀👑 // Jeiky Vortex"/>
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Make way, for the kings"/>
-        <meta property="og:image" content="./assets/images/image01.jpg"/>
+        <meta property="og:image" content="./assets/images/VRTX565.png"/>
         <meta property="og:image:type" content="image/jpeg"/>
         <meta property="og:image:width" content="1280"/>
         <meta property="og:image:height" content="800"/>
@@ -964,6 +964,19 @@
             </div>
         </div>
         <script>
+            var tekken7a = new Audio ('./audio/fighttothetop.mp3');
+
+            function fighttothetop (){ 
+                tekken7a.volume = 0.35
+                tekken7a.loop = true
+                tekken7a.play();
+            }
+
+            function fighttotheSTOP (){ 
+                tekken7a.pause();
+                tekken7a.currentTime = 0;
+            }
+
             (function() {
                 var on = addEventListener
                 , $ = function(q) {
@@ -1431,6 +1444,7 @@
             
                 // si la ultima esta bien, lo activa
                 if (konamiCodePosition == konamiCode.length) {
+                fighttotheSTOP();
                 heheheh();
                 konamiCodePosition = 0;
                 }
@@ -1443,6 +1457,10 @@
             var audio = new Audio('./audio/rickroll.mp3');
             audio.play();
             }
+
+            heheheh.addEventListener('ended', function(){
+                fighttothetop();
+            });
         </script>
     </body>
 </html>
