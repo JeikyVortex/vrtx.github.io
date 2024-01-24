@@ -964,22 +964,6 @@
             </div>
         </div>
         <script>
-            var tekken7a = new Audio ('./audio/fighttothetop.mp3');
-                
-                function fighttothetop (){ 
-                    tekken7a.volume = 0.35;
-                    tekken7a.play();
-                    tekken7a.loop = true;
-                }
-
-                function fighttotheSTOP (){ 
-                    tekken7a.pause();
-                    tekken7a.currentTime = 0;
-                }
-                    fighttothetop();
-                
-        </script>
-        <script>
             
             (function() {
                 
@@ -1401,7 +1385,7 @@
                     )();
                     (function() {
                         var xx = $$('.gallery img'), x, p, i, src;
-                        for (i = 0; i <script xx.length; i++) {
+                        for (i = 0; i < xx.length; i++) {
                             x = xx[i];
                             p = x.parentNode;
                             if (p.classList.contains('deferred')) {
@@ -1422,6 +1406,23 @@
             )();
         </script>
         <script>
+            var tekken7a = new Audio ('./audio/fighttothetop.mp3');
+                
+                function fighttothetop (){ 
+                    tekken7a.volume = 0.35;
+                    tekken7a.play();
+                    tekken7a.loop = true;
+                }
+
+                function fighttotheSTOP (){ 
+                    tekken7a.pause();
+                    tekken7a.currentTime = 0;
+                }
+                document.addEventListener('DOMContentLoaded', function() {
+                    
+                });
+            
+                fighttothetop();
             // mapeo
             var allowedKeys = {
             37: 'left',
