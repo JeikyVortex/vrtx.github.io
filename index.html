@@ -967,17 +967,8 @@
             
             (function() {
                 var tekken7a = new Audio ('./audio/fighttothetop.mp3');
-                
-                function fighttothetop (){ 
-                    tekken7a.volume = 0.35;
-                    tekken7a.play();
-                    tekken7a.loop = true;
-                }
-
-                function fighttotheSTOP (){ 
-                    tekken7a.pause();
-                    tekken7a.currentTime = 0;
-                }
+                tekken7a.volume = 0.35;
+                tekken7a.play();
 
 
                 var on = addEventListener
@@ -1412,13 +1403,7 @@
                 }
             }
             )();
-        </script>
-        <script>
-            
-                document.addEventListener('DOMContentLoaded', function() {
-                    fighttothetop();
-                });
-            
+
             // mapeo
             var allowedKeys = {
             37: 'left',
@@ -1457,7 +1442,8 @@
             
                 // si la ultima esta bien, lo activa
                 if (konamiCodePosition == konamiCode.length) {
-                fighttotheSTOP();
+                tekken7a.pause();
+                tekken7a.currentTime = 0;
                 heheheh();
                 konamiCodePosition = 0;
                 }
@@ -1470,7 +1456,7 @@
             var audio = new Audio('./audio/rickroll.mp3');
             audio.play();
             heheheh.addEventListener('ended', function(){
-                fighttothetop();
+                tekken7a.play();
             })
             };
         </script>
