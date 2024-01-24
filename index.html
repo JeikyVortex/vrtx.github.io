@@ -978,7 +978,7 @@
             }
 
             (function() {
-                fighttothetop();
+                
                 var on = addEventListener
                 , $ = function(q) {
                     return document.querySelector(q)
@@ -1207,6 +1207,7 @@
                         window.onerror = null;
                     }
                 };
+                fighttothetop();
                 on('load', function() {
                     setTimeout(function() {
                         $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing');
