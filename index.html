@@ -963,20 +963,33 @@
                 </div>
             </div>
         </div>
-        <audio id="tekken" preload="none" src="./audio/bg.mp3" autoplay></audio>
         <script>
+            var tekken = new Audio('./audio/bg.mp3');
+            var tekkenPlay = tekken.play();
 
             function moonsiders(){
                 tekken.volume = 0.35;
                 tekken.loop = true;
+                tekken.pause();
                 tekken.play();
+            }
+
+            if (tekkenPlay !== undefined) {
+                tekkenPlay.then(_ => {
+                    tekken.volume = 0.35;
+                    tekken.loop = true;
+                })
+                .catch(error => {
+                  // Auto-play was prevented
+                  // Show paused UI.
+                });
             }
 
             function moonSTOP(){
                 tekken.pause();
                 tekken.currentTime = 0;
             }
-
+            
             (function() {
                 var on = addEventListener
                 , $ = function(q) {
