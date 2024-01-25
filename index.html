@@ -969,7 +969,10 @@
             function moonsiders(){
                 tekken.volume = 0.35;
                 tekken.loop = true;
-                tekken.pause();
+                tekken.muted = true;
+                if(tekken.muted = true){
+                    tekken.muted = !tekken.muted;
+                }
                 tekken.play();
             }
 
@@ -977,7 +980,7 @@
                 tekken.pause();
                 tekken.currentTime = 0;
             }
-            
+
             (function() {
                 var on = addEventListener
                 , $ = function(q) {
