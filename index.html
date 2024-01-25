@@ -967,12 +967,8 @@
             var tekken = new Audio('./audio/bg.mp3');
             var tekkenPlay = tekken.play();
 
-            function moonsiders(){
                 tekken.volume = 0.35;
                 tekken.loop = true;
-                tekken.pause();
-                tekken.play();
-            }
 
             if (tekkenPlay !== undefined) {
                 tekkenPlay.then(_ => {
@@ -1472,7 +1468,7 @@
             audio.play();
             
             audio.addEventListener('ended', function() {
-                moonsiders();
+                tekkenPlay;
                 });
             }
 
