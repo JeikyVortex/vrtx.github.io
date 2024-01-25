@@ -10,7 +10,7 @@
         <meta property="og:title" content="🌀👑 // Jeiky Vortex"/>
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Make way, for the kings"/>
-        <meta property="og:image" content="./assets/images/pfp_li.jpeg"/>
+        <meta property="og:image" content="./assets/images/image01.jpg"/>
         <meta property="og:image:type" content="image/jpeg"/>
         <meta property="og:image:width" content="1280"/>
         <meta property="og:image:height" content="800"/>
@@ -208,7 +208,7 @@
                 position: relative;
                 z-index: 1;
                 border-radius: inherit;
-                padding: 3.125rem 2.5rem;
+                padding: 3rem 1rem;
                 max-width: 100%;
                 width: 25rem;
             }
@@ -697,7 +697,7 @@
                 }
 
                 #main > .inner {
-                    padding: 2rem 2rem;
+                    padding: 1rem 1rem;
                 }
 
                 #main > .inner > * {
@@ -897,9 +897,9 @@
                         <br/>
                         <span>Mucho gusto ヾ(^▽^*)))</span>
                         <br/>
-                        <span>(Sigo creando este sitio, paciencia ＞﹏＜)</span>
+                        <span>Por mientras prueba este codigo, ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️🅱️🅰️</span>
                         <br/>
-                        <span>(Por mientras hace esto, ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️🅱️🅰️)</span>
+                        <span>(Si suena cada boton, es porque lo estas haciendo bien)</span>
                     </p>
                     <ul id="icons01" class="icons">
                         <h2 id="text03">Sobre mi</h2>
@@ -964,13 +964,20 @@
             </div>
         </div>
         <script>
-            
+            var tekken = new Audio('./audio/bg.mp3');
+
+            function moonsiders(){
+                tekken.volume = 0.35;
+                tekken.loop = true;
+                tekken.play();
+            }
+
+            function moonSTOP(){
+                tekken.pause();
+                tekken.currentTime = 0;
+            }
+            moonsiders();
             (function() {
-                var tekken7a = new Audio ('./audio/fighttothetop.mp3');
-                tekken7a.volume = 0.35;
-                tekken7a.play();
-
-
                 var on = addEventListener
                 , $ = function(q) {
                     return document.querySelector(q)
@@ -1200,7 +1207,6 @@
                     }
                 };
                 on('load', function() {
-                    
                     setTimeout(function() {
                         $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing');
                         setTimeout(function() {
@@ -1208,6 +1214,7 @@
                         }, 1375);
                     }, 100);
                 });
+                
                 loadElements(document.body);
                 var style, sheet, rule;
                 style = document.createElement('style');
@@ -1403,6 +1410,7 @@
             }
             )();
 
+            //-----------------------------------------------
             // mapeo
             var allowedKeys = {
             37: 'left',
@@ -1412,12 +1420,6 @@
             65: 'a',
             66: 'b'
             };
-
-            function click(){
-            var audioButton = new Audio('./audio/button.mp3');
-                audioButton.volume = 0.5
-                audioButton.play();
-            }
 
             // codigo konami
             var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
@@ -1436,14 +1438,13 @@
             if (key == requiredKey) {
             
                 // suma uno si sigue bien la secuencia
-                click();
                 konamiCodePosition++;
             
                 // si la ultima esta bien, lo activa
                 if (konamiCodePosition == konamiCode.length) {
-                tekken7a.pause();
-                tekken7a.currentTime = 0;
-                heheheh();
+                moonSTOP();
+                setTimeout(heheheh, 1750);
+                setTimeout(msgs1, 11550);
                 konamiCodePosition = 0;
                 }
             } else {
@@ -1452,12 +1453,21 @@
             });
 
             function heheheh() {
+            
             var audio = new Audio('./audio/rickroll.mp3');
+            
             audio.play();
-            heheheh.addEventListener('ended', function(){
-                tekken7a.play();
-            })
-            };
+            
+            audio.addEventListener('ended', function() {
+                moonsiders();
+                });
+            }
+
+            function msgs1(){
+                alert("Me van a creer que mi sueño cuando niño era hacer ESTA broma de ESTA forma?");
+                alert("Estoy muy feliz haciendo estas cosas. (┬┬◡┬┬) 💕");
+            }
         </script>
+        <script src="./js/keys_sounds.js"></script>
     </body>
 </html>
