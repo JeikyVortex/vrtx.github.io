@@ -964,17 +964,6 @@
             </div>
         </div>
         <script>
-            var tekken = new Audio('./audio/bg.mp3');
-
-                tekken.volume = 0.35;
-                tekken.loop = true;
-                tekken.play();
-
-            function moonSTOP(){
-                tekken.pause();
-                tekken.currentTime = 0;
-            }
-            
             (function() {
                 var on = addEventListener
                 , $ = function(q) {
@@ -1407,7 +1396,18 @@
                 }
             }
             )();
+        </script>
+        <script>
+            var tekken = new Audio('./audio/bg.mp3');
 
+            tekken.volume = 0.35;
+            tekken.loop = true;
+            tekken.play();
+
+            function moonSTOP(){
+            tekken.pause();
+            tekken.currentTime = 0;
+            }
             //-----------------------------------------------
             // mapeo
             var allowedKeys = {
@@ -1452,11 +1452,11 @@
 
             function heheheh() {
             
-            var audio = new Audio('./audio/rickroll.mp3');
+            var rick = new Audio('./audio/rickroll.mp3');
             
-            audio.play();
+            rick.play();
             
-            audio.addEventListener('ended', function() {
+            rick.addEventListener('ended', function() {
                 tekken.play();
                 });
             }
