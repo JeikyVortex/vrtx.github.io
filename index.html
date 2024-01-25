@@ -1402,7 +1402,16 @@
 
             tekken.volume = 0.35;
             tekken.loop = true;
-            tekken.play();
+            var tekkenPlay = tekken.play();
+
+            if (tekkenPlay !== undefined) {
+                tekkenPlay.then(_ => {
+                    console.log("Work?")
+                })
+                .catch(error => {
+                    console.log("Nope.")
+                });
+            }
 
             function moonSTOP(){
             tekken.pause();
@@ -1454,7 +1463,7 @@
             
             var rick = new Audio('./audio/rickroll.mp3');
             
-            rick.play();
+            //rick.play();
             
             rick.addEventListener('ended', function() {
                 tekken.play();
