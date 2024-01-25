@@ -969,7 +969,6 @@
             function moonsiders(){
                 tekken.volume = 0.35;
                 tekken.loop = true;
-                tekken.play();
             }
 
             function moonSTOP(){
@@ -977,6 +976,7 @@
                 tekken.currentTime = 0;
             }
             moonsiders();
+            tekken.play();
             (function() {
                 var on = addEventListener
                 , $ = function(q) {
