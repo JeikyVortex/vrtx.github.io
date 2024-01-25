@@ -963,8 +963,8 @@
                 </div>
             </div>
         </div>
+        <audio id="tekken" preload="none" src="./audio/bg.mp3"></audio>
         <script>
-            var tekken = new Audio('./audio/bg.mp3');
 
             function moonsiders(){
                 tekken.volume = 0.35;
@@ -978,7 +978,6 @@
                 tekken.currentTime = 0;
             }
             moonsiders();
-            tekken.play();
             (function() {
                 var on = addEventListener
                 , $ = function(q) {
@@ -1470,6 +1469,17 @@
                 alert("Estoy muy feliz haciendo estas cosas. (┬┬◡┬┬) 💕");
             }
         </script>
+        <script>
+            // Show loading animation.
+            var playPromise = moonsiders();
+          
+            if (playPromise !== undefined) {
+              playPromise.then(_ => {
+              })
+              .catch(error => {
+              });
+            }
+          </script>
         <script src="./js/keys_sounds.js"></script>
     </body>
 </html>
