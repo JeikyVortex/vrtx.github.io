@@ -965,21 +965,10 @@
         </div>
         <script>
             var tekken = new Audio('./audio/bg.mp3');
-            var tekkenPlay = tekken.play();
 
                 tekken.volume = 0.35;
                 tekken.loop = true;
-
-            if (tekkenPlay !== undefined) {
-                tekkenPlay.then(_ => {
-                    tekken.volume = 0.35;
-                    tekken.loop = true;
-                })
-                .catch(error => {
-                  // Auto-play was prevented
-                  // Show paused UI.
-                });
-            }
+                tekken.play();
 
             function moonSTOP(){
                 tekken.pause();
@@ -1468,7 +1457,7 @@
             audio.play();
             
             audio.addEventListener('ended', function() {
-                tekkenPlay;
+                tekken.play();
                 });
             }
 
