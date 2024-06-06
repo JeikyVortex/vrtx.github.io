@@ -51,5 +51,5 @@ function activateCheats() {
   alert("Bien, lo encontraste~");
   alert("Bueh, el secreto es este, apreta aceptar");
 
-  window.location.href = "https://www.youtube.com/watch?v=58LeVo7j46w";
+  window.location.href = "https://www.youtube.com/watch?v=N6w-UzfGX0c";
 }
