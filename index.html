@@ -424,6 +424,7 @@
             .iconxdd {
                 width: 28px; 
                 height: 28px; 
+                border-radius: 10px;
             }
 
             .icons {
@@ -462,7 +463,29 @@
             }
 
             .icons li a .label {
-                display: none;
+                visibility: hidden;
+                width: 250%;
+                font-family: 'Arial', sans-serif;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 15px;
+                background-color: black;
+                color: #FFE500;
+                text-align: center;
+                border-radius: 10px;
+                padding: 6px 6px;
+                position: absolute;
+                z-index: 1;
+                bottom: 105%;
+
+                /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+                opacity: 0;
+                transition: opacity 1s;
+            }
+            
+            .icons li a:hover .label {
+                visibility: visible;
+                opacity: 1;
             }
 
             #icons01 {
@@ -913,10 +936,16 @@
                         <h2 id="text03">Sobre mi</h2>
                         <li>
                             <a class="n06" href="./info.html">
+                                <span class="label">Sobre mi</span>
                                 <svg>
                                     <use xlink:href="#plus"></use>
                                 </svg>
-                                <span class="label">Sobre mi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="n06" href="./gen.html">
+                                <span class="label">Carta Abierta</span>
+                                <img src="./assets/icons/gen.png" class="iconxdd">
                             </a>
                         </li>
                         <br>
