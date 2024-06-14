@@ -1,9 +1,8 @@
-function tekken() {
-
-const tekken = new Audio('./audio/bg.mp3');
-tekken.muted = false
+var tekken = document.createElement("AUDIO")
+document.body.appendChild(tekken);
+tekken.src = "./audio/bg.mp3"
 tekken.volume = 0.50
-tekken.play();
-}
 
-tekken();
+document.body.addEventListener("mousemove", function () {
+  tekken.play()
+})
