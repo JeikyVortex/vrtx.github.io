@@ -68,7 +68,8 @@ function playme() {
 }
 
 function rick(){
-  var audio = new Audio('./audio/rickroll.mp3');
+  var rick1 = new Audio('./audio/rickroll.mp3');
+  rick1.play();
 }
 
 function rickmsgs1(){
