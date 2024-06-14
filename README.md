@@ -1,4 +1,20 @@
 # Hola, aqui esta creado el sitio
+## Actualizado (14/06/24)
+
+Nuevo boton:
+-Passwords: Si alguna vez pensaste en que mi pag. tiene secretos, este es el lugar ahora.
+
+Se quito el codigo Konami, despues veremos como agregarlo nuevamente PERO EL ARCHIVO DE COMO ACTIVARLO SIGUE AQUI, pueden ocuparlo
+
+"Passwords" pista:
+
+-Vortex Racing Team Xtream
+-Coin Flip
+-14/feb // Fem
+-"Then I close my eyes, ______ ____ __ ____"
+
+Cualquier feedback, diganme por DM de cualquier red social en la pag.
+
 ## Actualizado (11/06/24)
 
 Nuevos botones:
