@@ -77,3 +77,14 @@ function rickmsgs1(){
   alert("Estoy muy feliz haciendo estas cosas. (┬┬◡┬┬) 💕");
   alert("Es el tema entero, por cierto, si quieres parar el tema, presiona F5");
 }
+
+function ed() {
+  var audio = new Audio('./audio/tada.mp3');
+  audio.play();
+  setTimeout(ine,1000)
+}
+
+function ine() {
+  alert("Si llego aqui, es porque me esta buscando, adelante");
+  window.location.href = "https://www.linkedin.com/in/joaquin-rojas/";
+}
