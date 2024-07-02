@@ -1,6 +1,11 @@
 # Hola, aqui esta creado el sitio
 ## Actualizado (14/06/24)
 
+Nueva Password: link
+(No es necesario ocultarla, es para llegar a LinkedIn)
+
+## Actualizado (14/06/24)
+
 Nuevo boton:
 -Passwords: Si alguna vez pensaste en que mi pag. tiene secretos, este es el lugar ahora.
 
