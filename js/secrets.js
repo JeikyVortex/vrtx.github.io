@@ -92,7 +92,7 @@ function ine() {
 function doomed() {
   var audio = new Audio('./audio/tada.mp3');
   audio.play();
-  setTimeout(ine,1000)
+  setTimeout(doom,1000)
 }
 
 function doom() {
