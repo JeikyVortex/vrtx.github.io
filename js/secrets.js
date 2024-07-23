@@ -89,7 +89,7 @@ function ine() {
   window.location.href = "https://www.linkedin.com/in/joaquin-rojas/";
 }
 
-function eed() {
+function doomed() {
   var audio = new Audio('./audio/tada.mp3');
   audio.play();
   setTimeout(ine,1000)
