@@ -88,3 +88,14 @@ function ine() {
   alert("Si llego aqui, es porque me esta buscando, adelante");
   window.location.href = "https://www.linkedin.com/in/joaquin-rojas/";
 }
+
+function eed() {
+  var audio = new Audio('./audio/tada.mp3');
+  audio.play();
+  setTimeout(ine,1000)
+}
+
+function doom() {
+  alert("rip and tear...");
+  window.location.href = "/doom.html";
+}
